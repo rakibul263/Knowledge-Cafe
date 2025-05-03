@@ -28,7 +28,7 @@ function App() {
   // console.log(bookMarked);
   return (
     <>
-      <div className='container m-aut'>
+      <div className='container m-auto'>
         <Navbar></Navbar>
 
           <div className="main-container flex text-center">
