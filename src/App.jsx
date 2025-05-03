@@ -1,7 +1,8 @@
 import './App.css'
-import Navbar from './components/navbar/navbar'
+import Navbar from './components/navbar/Navbar'
 import Blogs from './components/Blogs/blogs'
 import { useState } from 'react'
+
 
 function App() {
   const [bookMarked, setBookMarked] = useState([]);
