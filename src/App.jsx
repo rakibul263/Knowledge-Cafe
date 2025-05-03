@@ -28,23 +28,25 @@ function App() {
   // console.log(bookMarked);
   return (
     <>
-      <Navbar></Navbar>
+      <div className='container m-aut'>
+        <Navbar></Navbar>
 
-      <div className="main-container flex text-center">
-        <div className="left-container w-[70%]">
+          <div className="main-container flex text-center">
+            <div className="left-container w-[70%]">
 
-          <Blogs handelMarkAsRead={handelMarkAsRead} handelBookMark={handelBookMark}></Blogs>
-        </div>
-        <div className="right-container w-[30%] border-2 rounded-3xl text-red-600">
-          <div className='text-2xl'>
-            <h1>Reading Time : {readingCount}</h1>
-            <h1>Bookmark Count : {bookMarked.length}</h1>
+              <Blogs handelMarkAsRead={handelMarkAsRead} handelBookMark={handelBookMark}></Blogs>
+            </div>
+            <div className="right-container w-[30%] border-2 rounded-3xl text-red-600">
+              <div className='text-2xl'>
+                <h1>Reading Time : {readingCount}</h1>
+                <h1>Bookmark Count : {bookMarked.length}</h1>
+              </div>
+              {
+                bookMarked.map((marked)=> <p key={marked.id} className='bg-red-400 p-2 shadow-2xl m-3 border-2 rounded-3xl text-white font-bold'>{marked.title}</p>)
+              }
+
+            </div>
           </div>
-          {
-            bookMarked.map((marked)=> <p key={marked.id} className='bg-red-400 p-2 shadow-2xl m-3 border-2 rounded-3xl text-white font-bold'>{marked.title}</p>)
-          }
-
-        </div>
       </div>
     </>
   )
